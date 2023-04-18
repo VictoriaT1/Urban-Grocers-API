@@ -7,7 +7,7 @@ const requestBody = {
 }
 
 test('test delete', async () => {
-	let actualStatusCode;
+
 	let response;
 	try {
 		response = await fetch(`${config.API_URL}/api/v1/kits`, {
@@ -17,7 +17,6 @@ test('test delete', async () => {
 			},
 			body: JSON.stringify(requestBody)
 		});
-		actualStatusCode = response.status;
 	} catch (error) {
 		console.error(error);
 	}
@@ -38,3 +37,4 @@ test('test delete', async () => {
 	}
 	expect(deleteStatus).toBe(200);
 });
+
