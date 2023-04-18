@@ -1,13 +1,38 @@
 // eslint-disable-next-line no-undef
 const config = require('../config');
 
-test('delete kit 7 and return 200 status code', async () => {
-    let deleteStatus; 
+const requestBody = {
+	"name": "my kit",
+	"cardId": 1
+}
+
+test('test delete', async () => {
+	let actualStatusCode;
+	let response;
 	try {
-		const response = await fetch(`${config.API_URL}api/v1/kits/7`, {
+		response = await fetch(`${config.API_URL}/api/v1/kits`, {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(requestBody)
+		});
+		actualStatusCode = response.status;
+	} catch (error) {
+		console.error(error);
+	}
+
+
+	let actualResponseBody = await response.json();
+	let actualId = actualResponseBody.id; 
+
+	let deleteStatus;
+	try {
+		const response = await fetch(`${config.API_URL}/api/v1/kits/` + actualId, {
 			method: 'DELETE',
 		});
-		deleteStatus = response.status; 
+		deleteStatus = response.status;
+
 	} catch (error) {
 		console.error(error);
 	}

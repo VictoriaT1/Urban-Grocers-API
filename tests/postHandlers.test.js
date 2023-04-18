@@ -49,5 +49,5 @@ test('Response body should contain Order and Go', async () => {
     } catch (error) {
         console.error(error);
     }
-   
-}); expect(actualResponseBody["courierService"]).toBe("Order and Go");
+	expect(actualResponseBody["courierService"]).toBe("Order and Go");
+});
