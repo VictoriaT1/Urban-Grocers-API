@@ -14,7 +14,6 @@ test('Status code should be 200', async () => {
 			body: JSON.stringify(requestBody)
 		});
 		actualstatus = response.status;
-		console.log(response)
 	} catch (error) {
 		console.error(error);
 	}
@@ -36,7 +35,6 @@ test('Response body should contain ok true', async () => {
 			body: JSON.stringify(requestBody)
 		});
 		actualResponseBody = await response.json()
-		console.log(response);
 	} catch (error) {
 		console.error(error);
 	}

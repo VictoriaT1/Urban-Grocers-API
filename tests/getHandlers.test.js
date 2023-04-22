@@ -12,7 +12,7 @@ test('Should return 200 status code', async () => {
     expect(actualStatus).toBe(200);
 });
 
-test('Response Body should contain For movies and series', async () => {
+test('Should contain For movies and series', async () => {
 	let actualResponseBody;
     try {
         const response = await fetch(`${config.API_URL}/api/v1/kits/2`);
