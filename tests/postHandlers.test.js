@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-undef
 const config = require('../config');
-
+// Creating a request body
 const requestBody = {
 	"productsList": [
         {
@@ -17,6 +17,8 @@ const requestBody = {
         }
     ]
 	}
+
+// POST test 1 ensures that when an order is created, the server responds with a 201 status code indicating successful creation
 
 test('Should return 201 status code', async () => {
 	let actualStatusCode;
@@ -35,6 +37,8 @@ test('Should return 201 status code', async () => {
 
     expect(actualStatusCode).toBe(201);
 });
+
+// POST test 2 verifies that when an order is created the courierService field in the response is set to "Order and Go"
 
 test('Should contain Order and Go', async () => {
 	let actualResponseBody;
