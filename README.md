@@ -1,7 +1,6 @@
 # Sprint 7 project
 
-
-This is a JEST API testing suite for the Urban Grocers App. The endpoints are being tested for PUT, POST, GET and DELETE and each endpoint has 2 tests.
+This is a JEST API testing suite for the Urban Grocers App. In this project, I developed JavaScript code using Visual Studio Code to perform positive testing on the Urban Grocers API. I utilized npx jest to execute these tests. Additionally, I employed Postman to test the API endpoints for GET, POST, PUT, and DELETE requests. My code incorporated JavaScript constructs such as const, let, try, catch, and expect.
 
 To set up the environment before creating the test is as follows:
 After linking Practicum account with GitHub, a repository will be created automatically. The repository name will be hm07-qa-us.
