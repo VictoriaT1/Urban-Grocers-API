@@ -6,6 +6,8 @@ const requestBody = {
 	"cardId": 1
 }
 
+// DELETE test 1 creates a kit then deletes it then checks that the delete operation was successful
+
 test('Should delete kit', async () => {
 
 	let response;
@@ -38,6 +40,7 @@ test('Should delete kit', async () => {
 	expect(deleteStatus).toBe(200);
 });
 
+// DELETE test 2 creates a kit then deletes it to validate a "true" response is returned
 
 test('Should contain ok true', async () => {
 	let response;
