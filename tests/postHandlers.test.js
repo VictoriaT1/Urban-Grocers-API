@@ -18,7 +18,7 @@ const requestBody = {
     ]
 	}
 
-// POST test 1 ensures that when an order is created, the server responds with a 201 status code indicating successful creation
+// POST test 1 checks that when an order is created, the server responds with a 201 status code indicating successful creation
 
 test('Should return 201 status code', async () => {
 	let actualStatusCode;
