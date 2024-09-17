@@ -1,6 +1,8 @@
 // eslint-disable-next-line no-undef
 const config = require('../config');
 
+// GET test 2 checks that getting a kit returns a 200 status code
+
 test('Should return 200 status code', async () => {
     let actualStatus; 
     try {
@@ -11,6 +13,8 @@ test('Should return 200 status code', async () => {
     }
     expect(actualStatus).toBe(200);
 });
+
+// GET test 2 checks that the correct json body response is recieved for the kit "For movies and series"
 
 test('Should contain For movies and series', async () => {
 	let actualResponseBody;
