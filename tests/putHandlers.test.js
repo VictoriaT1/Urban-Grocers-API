@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-undef
 const config = require('../config');
 
+// PUT test 1 checks that when a product's price is updated the server responds with a status code of 200
 
 test('Status code should be 200', async () => {
 	let actualstatus;
@@ -23,6 +24,9 @@ test('Status code should be 200', async () => {
 const requestBody = {
     "price": 175
 }
+
+// PUT test 2 test checks that when a product is updated via a PUT request the server responds with a JSON object that includes `"ok": true`
+
 test('Response body should contain ok true', async () => {
 	let actualResponseBody;
     try {
